@@ -1,0 +1,101 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha34.102.dtd" >
+   <PATCH nodename="C:\Users\jens\Desktop\FirmataSandbox\PinMode (Firmata) help.v4p" scrollx="0" scrolly="-360">
+   <BOUNDS type="Window" left="15250" top="4020" width="9000" height="6000">
+   </BOUNDS>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="3" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="10" top="20" width="5100" height="450">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10" top="20" width="5100" height="450">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|PinMode (Firmata)|">
+   </PIN>
+   <PIN pinname="Output String" slicecount="1" visible="0" values="||">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" visible="1" values="14">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="230" top="600" width="5100" height="600">
+   </BOUNDS>
+   <BOUNDS type="Box" left="230" top="600" width="5080" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="||">
+   </PIN>
+   <PIN pinname="Output String" slicecount="1" visible="0" values="||">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="7" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="4000" top="3710" width="830" height="250">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4000" top="3710" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Debug">
+   </PIN>
+   </NODE>
+   <NODE systemname="PinMode (Firmata)" filename="PinMode (Firmata).v4p" componentmode="Hidden" id="6" nodename="PinMode (Firmata).v4p">
+   <BOUNDS type="Node" left="3120" top="3260" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3120" top="3260" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="12800" top="6920" width="7210" height="7760">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Mode" visible="1" slicecount="1" values="ANALOG">
+   </PIN>
+   <PIN pinname="Index" visible="1" slicecount="1" values="96">
+   </PIN>
+   <PIN pinname="Debug" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="5" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="4010" top="1280" width="950" height="1730">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4010" top="1280" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="SERVO">
+   </PIN>
+   <PIN pinname="Style" slicecount="1" values="List">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Mode">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output Enum" dstnodeid="6" dstpinname="Mode">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Debug" dstnodeid="7" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="4" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3120" top="2810" width="440" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3120" top="2810" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="127">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Index">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="6" dstpinname="Index">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="8" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="3110" top="4370" width="800" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3110" top="4370" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="8" dstpinname="Input Node">
+   </LINK>
+   </PATCH>

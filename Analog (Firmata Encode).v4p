@@ -1,0 +1,201 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha34.102.dtd" >
+   <PATCH nodename="C:\Users\jens\Desktop\FirmataSandbox\Analog (Firmata Encode).v4p" systemname="Analog (Firmata Encode)" filename="C:\Users\jens\Desktop\FirmataSandbox\Analog (Firmata Encode).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="18480" top="2140" width="5670" height="12880">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="34.101.0">
+   </PACK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="3">
+   <BOUNDS type="Node" left="1750" top="630" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1750" top="630" width="800" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Changed" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="17">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="4" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="630" top="9680" width="800" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="630" top="9680" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Firmata Out|">
+   </PIN>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="7">
+   <BOUNDS type="Node" left="2770" top="650" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2770" top="650" width="680" height="240">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Index">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="15">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Changed" visible="1" pintype="Output">
+   </PIN>
+   </NODE>
+   <NODE systemname="Switch (Node Input)" nodename="Switch (Node Input)" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="2140" top="7730" width="670" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Switch" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="AnalogPinCommand (Firmata)" filename="AnalogPinCommand (Firmata).v4p" nodename="AnalogPinCommand (Firmata).v4p" componentmode="Hidden" id="22" debug="0">
+   <BOUNDS type="Node" left="2765" top="1185" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1360" top="120" width="3110" height="3490">
+   </BOUNDS>
+   <BOUNDS type="Window" left="9970" top="7130" width="3110" height="3490">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Command" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AsRaw (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="AsRaw (Value)" componentmode="Hidden" id="66">
+   <BOUNDS type="Node" left="2760" top="6880" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="5" values="232,233,233,115,123">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Format" slicecount="1" visible="1" values="Byte">
+   </PIN>
+   <PIN pinname="Format Bin Size" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Input Bin Size" slicecount="1" visible="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="22" dstpinname="Index">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="101" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="3110" top="6170" width="630" height="250">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3110" top="6170" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Byte">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="101" srcpinname="Output Enum" dstnodeid="66" dstpinname="Format">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="109">
+   <BOUNDS type="Node" left="2140" top="5370" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Changed" dstnodeid="109" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Changed" dstnodeid="109" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="66" srcpinname="Output" dstnodeid="12" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Zip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Zip (Value)" componentmode="Hidden" id="111">
+   <BOUNDS type="Node" left="2760" top="5360" width="1020" height="270">
+   </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="95">
+   </PIN>
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="124">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="22" srcpinname="Output" dstnodeid="111" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="111" srcpinname="Output" dstnodeid="66" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="109" srcpinname="Output" dstnodeid="12" dstpinname="Switch">
+   </LINK>
+   <NODE systemname="LSBMSB (Value)" filename="LSBMSB (Value).v4p" nodename="LSBMSB (Value).v4p" componentmode="Hidden" id="114">
+   <BOUNDS type="Node" left="3256" top="4873" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1631" top="2913" width="3250" height="3920">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-1" top="-1" width="3250" height="3920">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="114" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="114" srcpinname="LSB" dstnodeid="111" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="114" srcpinname="MSB" dstnodeid="111" dstpinname="Input 3">
+   </LINK>
+   <NODE systemname="NIL (Node)" filename="%VVVV%\lib\nodes\modules\Node\NIL (Node).v4p" nodename="NIL (Node)" componentmode="Hidden" id="117">
+   <BOUNDS type="Node" left="2450" top="5950" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="Hidden" id="118" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="1748" top="5986" width="4770" height="4820">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4133" top="8396" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Debug">
+   </PIN>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="-1" top="-1" width="4770" height="4820">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="66" srcpinname="Output" dstnodeid="118" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="120">
+   <BOUNDS type="Node" left="630" top="2620" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="630" top="2620" width="800" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Firmata In|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="+ (Raw)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="+ (Raw)" componentmode="Hidden" id="119">
+   <BOUNDS type="Node" left="630" top="8130" width="1550" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse Sequence" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="120" srcpinname="Output Node" dstnodeid="119" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="Output" dstnodeid="119" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="119" srcpinname="Output" dstnodeid="4" dstpinname="Input Node">
+   </LINK>
+   </PATCH>
