@@ -1,0 +1,27 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha34.102.dtd" >
+   <PATCH nodename="C:\Users\jens\Desktop\FirmataSandbox\DigitalPinCommand (Firmata Encode Constants).v4p" systemname="DigitalPinCommand (Firmata Encode Constants)" filename="C:\Users\jens\Desktop\FirmataSandbox\DigitalPinCommand (Firmata Encode Constants).v4p">
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="0">
+   <BOUNDS type="Node" left="580" top="410" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="580" top="410" width="390" height="260">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="144">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="1" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   <BOUNDS type="Box" left="580" top="1010" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="580" top="1010" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Y Input Value">
+   </LINK>
+   <BOUNDS type="Window" left="-1" top="-1" width="3100" height="3100">
+   </BOUNDS>
+   </PATCH>
