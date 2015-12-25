@@ -148,18 +148,4 @@
    </NODE>
    <LINK srcnodeid="9" srcpinname="Output Enum" dstnodeid="7" dstpinname="Mapping">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="10" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="1700" top="3660" width="2200" height="230">
-   </BOUNDS>
-   <BOUNDS type="Box" left="1700" top="3660" width="2200" height="230">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|TODO: Add Servo Config Stuff|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="URL">
-   </PIN>
-   </NODE>
    </PATCH>

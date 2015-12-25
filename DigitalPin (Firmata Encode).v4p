@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha34.102.dtd" >
-   <PATCH nodename="C:\Users\jens\Desktop\FirmataSandbox\DigitalPin (Firmata Encode).v4p" systemname="DigitalPin (Firmata Encode)" filename="C:\Users\jens\Desktop\FirmataSandbox\DigitalPin (Firmata Encode).v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="11420" top="1050" width="9000" height="12140">
+   <PATCH nodename="C:\Users\jens\Desktop\FirmataSandbox\DigitalPin (Firmata Encode).v4p" systemname="DigitalPin (Firmata Encode)" filename="C:\Users\jens\Desktop\FirmataSandbox\DigitalPin (Firmata Encode).v4p" scrollx="1290" scrolly="0">
+   <BOUNDS type="Window" left="18480" top="2140" width="5670" height="12880">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -41,7 +41,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3850" top="1170" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="INPUT">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="OUTPUT">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Mode">
    </PIN>
@@ -66,20 +66,6 @@
    <PIN pinname="Changed" visible="1" pintype="Output">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="13" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="7060" top="3570" width="800" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="7060" top="3570" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Integer">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="13" dstpinname="Y Input Value">
-   </LINK>
    <NODE systemname="AsRaw (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="AsRaw (Value)" componentmode="Hidden" id="20">
    <BOUNDS type="Node" left="3170" top="5200" width="100" height="100">
    </BOUNDS>
@@ -199,5 +185,13 @@
    <LINK srcnodeid="0" srcpinname="Changed" dstnodeid="26" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="26" srcpinname="Output" dstnodeid="19" dstpinname="Switch">
+   </LINK>
+   <NODE systemname="Pin2Port" filename="Pin2Port.v4p" nodename="Pin2Port.v4p" componentmode="Hidden" id="27">
+   <BOUNDS type="Node" left="4730" top="5190" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="27" dstpinname="Input">
    </LINK>
    </PATCH>
